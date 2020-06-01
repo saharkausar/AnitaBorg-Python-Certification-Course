@@ -11,28 +11,35 @@ L1 = [2,3,4,5,8,4,3,5,2,1,8,8,6,3,4,5,7,9]
 str1 = "hello python three"
 
 #Function that calculates the number of unique elements in a list
-def calcListEl(ls):
-    x = []
-    for a in ls:
-        if a not in x:
-            x.append(a)
-    return x
+#def calcListEl(ls):
+#    x = []
+#    for a in ls:
+#        if a not in x:
+#            x.append(a)
+#    return x
 
 #Stores the unique elements of L1 in a new list
-newList = calcListEl(L1)
+#newList = calcListEl(L1)
 
-#Function that prints odd elements in the List
+#Updated Feedback [More pythonic way than above function]: Converting the list to a set() because a set contains only unique elements.
+newSet = set(L1)
+length = len(newSet)
+
+#Function that prints odd elements in the set or list
 def oddNum(ls):
-    for num in newList:
+    for num in newSet:
         if num % 2 != 0:
             print(num, end = " ")
 
 #Prints out our original list for reference
 print("List L1:", L1)
 
+#Prints out the number of unique elements in L1
+print("Number of unique elements in List L1:", length)
+
 #Prints out the elements that are both unique and odd in List L1 by passing in our newList to the oddNum function for reference
 print("Unique and odd elements in List L1:", end = " ")
-oddNum(newList)
+oddNum(newSet)
 
 #Prints the original string for our reference
 print(sep="\n")
