@@ -4,7 +4,7 @@
 #
 #   Anita Borg - Python Certification Course
 #
-#   DESCRIPTION: A python program that calculates helps calculate grades of students. A final letter grade is returned based off of an averaged
+#   DESCRIPTION: A python program that helps calculate the grades of students. A final letter grade is returned based off of an averaged
 #               percentage computed across five subjects.
 
 #Function that returns a particular letter grade based off the conditional score paramaters
