@@ -29,9 +29,9 @@ def primeCheck(n):
 
     #Loops through the array
     for i in array:
-        #Checks if the number is composite
-        if i == 4 or i == 6 or i == 8 or i == 9:
-            #If any digit is found to be composite, return false
+        #Checks if the number is composite and tests for edge cases (0 and 1)
+        if i == 4 or i == 6 or i == 8 or i == 9 or i == 0 or i == 1:
+            #If any digit is found to be composite or a non-prime number (0 or 1), return false
             return 0
     #If only prime digits are found, return true
     return 1
