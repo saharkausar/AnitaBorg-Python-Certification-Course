@@ -1,0 +1,3 @@
+﻿" Believe you can and you are already halfway there " - roosevelt
+ Document number one
+Editing the file through python scripting, wohoooo! 
