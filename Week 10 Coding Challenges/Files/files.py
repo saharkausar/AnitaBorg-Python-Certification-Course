@@ -14,6 +14,7 @@ Use the attached file doc1.txt
 """
 
 import os, sys
+import re
 
 
 try:
@@ -33,7 +34,11 @@ else:
     with open("doc1.txt", "a") as file:
         file.write("\nEditing the file through python scripting, wohoooo! ")
 
-    #Prints the strings in the file as a list but excludes the special characters
-    printFile = [x for x in readFile.split() if x.isalnum()]
+    #Cleans the file input to exclude any special characters from the string
+    cleanFile = (re.sub(r"[^a-zA-Z0-9]+", r" ", readFile))
+    #Stores each string of the cleanFile in a new list called printFile
+    printFile = [x for x in cleanFile.split()]
+    #Prints the file
     print(printFile)
+    #Closes the file
     file.close()
