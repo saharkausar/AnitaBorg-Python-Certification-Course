@@ -19,7 +19,7 @@ import re
 
 try:
     os.path.isfile("doc1.txt")
-    file = open("doc1.txt", "r")
+    file = open("doc1.txt", "r+")
 
 #Checks if the file exists and if the file is not found then an exception is raised
 except:
@@ -31,8 +31,7 @@ else:
     #Reads the attached file 'doc.txt'
     readFile = file.read()
 
-    with open("doc1.txt", "a") as file:
-        file.write("\nEditing the file through python scripting, wohoooo! ")
+    file.write("\nEditing the file through python scripting, wohoooo! ")
 
     #Cleans the file input to exclude any special characters from the string
     cleanFile = (re.sub(r"[^a-zA-Z0-9]+", r" ", readFile))
